@@ -1,11 +1,44 @@
 <template>
-  <div>hello vue</div>
-
+  <div>
+    <header>first vue demo</header>
+    <section class="game-body">
+      <section class="row">
+        <GameLi v-bind:text="checkText"/>
+        <GameLi v-bind:text="checkText"/>
+        <GameLi v-bind:text="checkText"/>
+      </section>
+      <section class="row">
+        <GameLi v-bind:text="checkText"/>
+        <GameLi v-bind:text="checkText"/>
+        <GameLi v-bind:text="checkText"/>
+      </section>
+      <section class="row">
+        <GameLi v-bind:text="checkText"/>
+        <GameLi v-bind:text="checkText"/>
+        <GameLi v-bind:text="checkText"/>
+      </section>
+    </section>
+  </div>
 </template>
 
 <script>
+import GameLi from '../components/GameLi'
 export default {
-  name: 'Game'
+  name: 'Game',
+  components: {
+    GameLi
+  },
+  data () {
+    return {
+      checkText: 'o',
+      gameMp: [
+        [],
+        [],
+        []
+      ]
+
+    }
+  }
 }
 </script>
 
@@ -24,5 +57,14 @@ li {
 }
 a {
   color: #42b983;
+}
+.game-body {
+  border: 1px solid;
+  font-size: 50px;
+  width: 300px;
+  height: 300px;
+}
+.row {
+  display: flex;
 }
 </style>
