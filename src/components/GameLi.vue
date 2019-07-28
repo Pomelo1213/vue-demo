@@ -1,18 +1,26 @@
 <template>
-  <div class="game-li">
-    {{text}}
+  <div v-on:click="handleClick" class="game-li">
+    <template v-if="flag">{{check}}</template>
+    <template v-else></template>
   </div>
 </template>
 
 <script>
 export default {
   props: ['text'],
-  methods () {
-
-  },
   data () {
     return {
-
+      flag: false
+    }
+  },
+  methods: {
+    handleClick () {
+      if (this.flag) {
+        return
+      }
+      this.flag = true
+      this.check = this.text ? 'o' : 'x'
+      this.$emit('liClick')
     }
   }
 }
