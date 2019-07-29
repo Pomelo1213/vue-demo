@@ -88,6 +88,9 @@ a {
   font-size: 50px;
   width: 300px;
   height: 300px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .row {
   display: flex;
