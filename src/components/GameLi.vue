@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  props: ['text'],
+  props: ['text', 'state'],
   data () {
     return {
       flag: false
@@ -30,6 +30,7 @@ export default {
 <style scope>
 .game-li {
   color: #fff;
+  font-size: 60px;
   width: 100px;
   height: 100px;
   box-sizing: border-box;
