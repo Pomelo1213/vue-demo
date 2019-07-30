@@ -33,7 +33,6 @@ export default {
   width: 100px;
   height: 100px;
   box-sizing: border-box;
-  border-bottom: 3px solid rgb(72, 158, 146);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,13 +40,5 @@ export default {
   cursor: pointer;
   user-select: none;
 }
-.game-li:nth-child(1), .game-li:nth-child(3), .game-li:nth-child(7) {
-  border-right: 3px solid rgb(72, 158, 146);
-}
-.game-li:nth-child(3), .game-li:nth-child(6), .game-li:nth-child(9) {
-  border-left: 3px solid rgb(72, 158, 146);
-}
-.game-li:nth-child(7), .game-li:nth-child(8), .game-li:nth-child(9) {
-  border-bottom: transparent;
-}
+
 </style>

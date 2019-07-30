@@ -2,20 +2,20 @@
   <div>
     <header>first vue demo</header>
     <section class="game-body">
-      <section class="row">
-        <GameLi @liClick="handleOuterClick(0)" v-bind:text="checkText"/>
-        <GameLi @liClick="handleOuterClick(1)" v-bind:text="checkText"/>
-        <GameLi @liClick="handleOuterClick(2)" v-bind:text="checkText"/>
+      <section class="row row-1">
+        <GameLi class="row-one" @liClick="handleOuterClick(0)" v-bind:text="checkText"/>
+        <GameLi class="row-one" @liClick="handleOuterClick(1)" v-bind:text="checkText"/>
+        <GameLi class="row-one" @liClick="handleOuterClick(2)" v-bind:text="checkText"/>
       </section>
-      <section class="row">
-        <GameLi @liClick="handleOuterClick(3)" v-bind:text="checkText"/>
-        <GameLi @liClick="handleOuterClick(4)" v-bind:text="checkText"/>
-        <GameLi @liClick="handleOuterClick(5)" v-bind:text="checkText"/>
+      <section class="row row-2">
+        <GameLi class="row-one" @liClick="handleOuterClick(3)" v-bind:text="checkText"/>
+        <GameLi class="row-one" @liClick="handleOuterClick(4)" v-bind:text="checkText"/>
+        <GameLi class="row-one" @liClick="handleOuterClick(5)" v-bind:text="checkText"/>
       </section>
-      <section class="row">
-        <GameLi @liClick="handleOuterClick(6)" v-bind:text="checkText"/>
-        <GameLi @liClick="handleOuterClick(7)" v-bind:text="checkText"/>
-        <GameLi @liClick="handleOuterClick(8)" v-bind:text="checkText"/>
+      <section class="row row-3">
+        <GameLi class="row-one" @liClick="handleOuterClick(6)" v-bind:text="checkText"/>
+        <GameLi class="row-one" @liClick="handleOuterClick(7)" v-bind:text="checkText"/>
+        <GameLi class="row-one" @liClick="handleOuterClick(8)" v-bind:text="checkText"/>
       </section>
     </section>
   </div>
@@ -84,7 +84,6 @@ a {
   color: #42b983;
 }
 .game-body {
-  border: 1px solid;
   font-size: 50px;
   width: 300px;
   height: 300px;
@@ -95,4 +94,31 @@ a {
 .row {
   display: flex;
 }
+
+.row-1, .row-2{
+  border-bottom: 5px solid rgb(72, 158, 146);
+}
+.row-1 >.row-one:nth-child(1){
+  border-top-left-radius: 8px;
+  border-right: 5px solid rgb(72, 158, 146);
+}
+.row-1 >.row-one:nth-child(3){
+  border-top-right-radius: 8px;
+  border-left: 5px solid rgb(72, 158, 146);
+}
+.row-2 >.row-one:nth-child(1){
+  border-right: 5px solid rgb(72, 158, 146);
+}
+.row-2 >.row-one:nth-child(3){
+  border-left: 5px solid rgb(72, 158, 146);
+}
+.row-3 >.row-one:nth-child(1){
+  border-bottom-left-radius: 8px;
+  border-right: 5px solid rgb(72, 158, 146);
+}
+.row-3 >.row-one:nth-child(3){
+  border-bottom-right-radius: 8px;
+  border-left: 5px solid rgb(72, 158, 146);
+}
+
 </style>
